@@ -31,3 +31,5 @@ const comparator = (a, b) => menu.indexOf(a) - menu.indexOf(b);
 function getOrder(input) {
   return input.match(new RegExp(menu.join("|"), "ig")).map(capitalize).sort(comparator).join(" ");
 }
+
+// or
