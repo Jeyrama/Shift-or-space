@@ -23,3 +23,11 @@ The menu items are fairly simple, there is no overlap in the names of the items:
 
 
 // Solution
+
+const menu = ["Burger", "Fries", "Chicken", "Pizza", "Sandwich", "Onionrings", "Milkshake", "Coke"];
+const capitalize = word => word.slice(0, 1).toUpperCase() + word.slice(1);
+const comparator = (a, b) => menu.indexOf(a) - menu.indexOf(b);
+
+function getOrder(input) {
+  return input.match(new RegExp(menu.join("|"), "ig")).map(capitalize).sort(comparator).join(" ");
+}
